@@ -15,7 +15,7 @@ class CourseListView(generics.ListAPIView):
     filter_backends = (OrderingFilter, SearchFilter)
     filter_fields = ('title', 'description')
     ordering_fields = ('id','title', 'description', 'time', 'professor')
-    search_fields = ('id','title', 'description', 'professor__first_name', 'professor__last_name', 'professor__email',
+    search_fields = ('id', 'title', 'description', 'professor__first_name', 'professor__last_name', 'professor__email',
                      'time__period')
 
 

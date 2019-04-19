@@ -6,6 +6,7 @@ class Time(models.Model):
 
     # Period Name
     period = models.CharField(max_length=32)
+    start_time = models.time
 
     def __str__(self):
         return ' %s' % (self.period)
