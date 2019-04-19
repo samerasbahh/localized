@@ -1,0 +1,441 @@
+http://127.0.0.1:8000/api/courses/
+
+
+GET /api/courses/
+HTTP 200 OK
+Allow: GET, HEAD, OPTIONS
+Content-Type: application/json
+Vary: Accept
+
+[
+    {
+        "id": 1,
+        "title": "Course1",
+        "description": "Course 1 description ",
+        "professor": "Samer asbah",
+        "time": [
+            " 8:00-9:00",
+            " 9:00-10:00"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Course2",
+        "description": "Course 2 description ",
+        "professor": "Shireen asbah1",
+        "time": [
+            " 10:00-11:00",
+            " 11:00-12:00"
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Course3",
+        "description": "Course 3 description",
+        "professor": "Tawfiq asbah2",
+        "time": [
+            " 8:00-9:00",
+            " 9:00-10:00"
+        ]
+    }
+]
+
+# Order by id asc
+http://127.0.0.1:8000/api/courses/?ordering=id
+
+GET /api/courses/?ordering=id
+HTTP 200 OK
+Allow: GET, HEAD, OPTIONS
+Content-Type: application/json
+Vary: Accept
+
+[
+    {
+        "id": 1,
+        "title": "Course1",
+        "description": "Course 1 description ",
+        "professor": "Samer asbah",
+        "time": [
+            " 8:00-9:00",
+            " 9:00-10:00"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Course2",
+        "description": "Course 2 description ",
+        "professor": "Shireen asbah1",
+        "time": [
+            " 10:00-11:00",
+            " 11:00-12:00"
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Course3",
+        "description": "Course 3 description",
+        "professor": "Tawfiq asbah2",
+        "time": [
+            " 8:00-9:00",
+            " 9:00-10:00"
+        ]
+    }
+]
+
+# order by id desc
+
+GET /api/courses/?ordering=-id
+HTTP 200 OK
+Allow: GET, HEAD, OPTIONS
+Content-Type: application/json
+Vary: Accept
+
+[
+    {
+        "id": 3,
+        "title": "Course3",
+        "description": "Course 3 description",
+        "professor": "Tawfiq asbah2",
+        "time": [
+            " 8:00-9:00",
+            " 9:00-10:00"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Course2",
+        "description": "Course 2 description ",
+        "professor": "Shireen asbah1",
+        "time": [
+            " 10:00-11:00",
+            " 11:00-12:00"
+        ]
+    },
+    {
+        "id": 1,
+        "title": "Course1",
+        "description": "Course 1 description ",
+        "professor": "Samer asbah",
+        "time": [
+            " 8:00-9:00",
+            " 9:00-10:00"
+        ]
+    }
+]
+
+# Order by title desc
+
+http://127.0.0.1:8000/api/courses/?ordering=-title
+GET /api/courses/?ordering=-title
+HTTP 200 OK
+Allow: GET, HEAD, OPTIONS
+Content-Type: application/json
+Vary: Accept
+
+[
+    {
+        "id": 3,
+        "title": "Course3",
+        "description": "Course 3 description",
+        "professor": "Tawfiq asbah2",
+        "time": [
+            " 8:00-9:00",
+            " 9:00-10:00"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Course2",
+        "description": "Course 2 description ",
+        "professor": "Shireen asbah1",
+        "time": [
+            " 10:00-11:00",
+            " 11:00-12:00"
+        ]
+    },
+    {
+        "id": 1,
+        "title": "Course1",
+        "description": "Course 1 description ",
+        "professor": "Samer asbah",
+        "time": [
+            " 8:00-9:00",
+            " 9:00-10:00"
+        ]
+    }
+]
+
+
+
+ #order by professor asc 
+ 
+http://127.0.0.1:8000/api/courses/?ordering=professor
+GET /api/courses/?ordering=professor
+HTTP 200 OK
+Allow: GET, HEAD, OPTIONS
+Content-Type: application/json
+Vary: Accept
+
+[
+    {
+        "id": 1,
+        "title": "Course1",
+        "description": "Course 1 description ",
+        "professor": "Samer asbah",
+        "time": [
+            " 8:00-9:00",
+            " 9:00-10:00"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Course2",
+        "description": "Course 2 description ",
+        "professor": "Shireen asbah1",
+        "time": [
+            " 10:00-11:00",
+            " 11:00-12:00"
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Course3",
+        "description": "Course 3 description",
+        "professor": "Tawfiq asbah2",
+        "time": [
+            " 8:00-9:00",
+            " 9:00-10:00"
+        ]
+    }
+]
+
+ #order by professor desc 
+GET /api/courses/?ordering=-professor
+HTTP 200 OK
+Allow: GET, HEAD, OPTIONS
+Content-Type: application/json
+Vary: Accept
+
+[
+    {
+        "id": 3,
+        "title": "Course3",
+        "description": "Course 3 description",
+        "professor": "Tawfiq asbah2",
+        "time": [
+            " 8:00-9:00",
+            " 9:00-10:00"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Course2",
+        "description": "Course 2 description ",
+        "professor": "Shireen asbah1",
+        "time": [
+            " 10:00-11:00",
+            " 11:00-12:00"
+        ]
+    },
+    {
+        "id": 1,
+        "title": "Course1",
+        "description": "Course 1 description ",
+        "professor": "Samer asbah",
+        "time": [
+            " 8:00-9:00",
+            " 9:00-10:00"
+        ]
+    }
+]
+
+
+# order by description desc
+
+GET /api/courses/?ordering=-description
+HTTP 200 OK
+Allow: GET, HEAD, OPTIONS
+Content-Type: application/json
+Vary: Accept
+
+[
+    {
+        "id": 3,
+        "title": "Course3",
+        "description": "Course 3 description",
+        "professor": "Tawfiq asbah2",
+        "time": [
+            " 8:00-9:00",
+            " 9:00-10:00"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Course2",
+        "description": "Course 2 description ",
+        "professor": "Shireen asbah1",
+        "time": [
+            " 10:00-11:00",
+            " 11:00-12:00"
+        ]
+    },
+    {
+        "id": 1,
+        "title": "Course1",
+        "description": "Course 1 description ",
+        "professor": "Samer asbah",
+        "time": [
+            " 8:00-9:00",
+            " 9:00-10:00"
+        ]
+    }
+]
+
+ #order by time - period desc
+ 
+
+GET /api/courses/?ordering=-time
+HTTP 200 OK
+Allow: GET, HEAD, OPTIONS
+Content-Type: application/json
+Vary: Accept
+
+[
+    {
+        "id": 2,
+        "title": "Course2",
+        "description": "Course 2 description ",
+        "professor": "Shireen asbah1",
+        "time": [
+            " 10:00-11:00",
+            " 11:00-12:00"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Course2",
+        "description": "Course 2 description ",
+        "professor": "Shireen asbah1",
+        "time": [
+            " 10:00-11:00",
+            " 11:00-12:00"
+        ]
+    },
+    {
+        "id": 1,
+        "title": "Course1",
+        "description": "Course 1 description ",
+        "professor": "Samer asbah",
+        "time": [
+            " 8:00-9:00",
+            " 9:00-10:00"
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Course3",
+        "description": "Course 3 description",
+        "professor": "Tawfiq asbah2",
+        "time": [
+            " 8:00-9:00",
+            " 9:00-10:00"
+        ]
+    },
+    {
+        "id": 1,
+        "title": "Course1",
+        "description": "Course 1 description ",
+        "professor": "Samer asbah",
+        "time": [
+            " 8:00-9:00",
+            " 9:00-10:00"
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Course3",
+        "description": "Course 3 description",
+        "professor": "Tawfiq asbah2",
+        "time": [
+            " 8:00-9:00",
+            " 9:00-10:00"
+        ]
+    }
+    
+    
+    
+    #filter by anything 
+    
+GET /api/courses/?search=3
+HTTP 200 OK
+Allow: GET, HEAD, OPTIONS
+Content-Type: application/json
+Vary: Accept
+
+[
+    {
+        "id": 3,
+        "title": "Course3",
+        "description": "Course 3 description",
+        "professor": "Tawfiq asbah2",
+        "time": [
+            " 8:00-9:00",
+            " 9:00-10:00"
+        ]
+    }
+]
+
+#filter by time example
+
+GET /api/courses/?search=8:00
+HTTP 200 OK
+Allow: GET, HEAD, OPTIONS
+Content-Type: application/json
+Vary: Accept
+
+[
+    {
+        "id": 1,
+        "title": "Course1",
+        "description": "Course 1 description ",
+        "professor": "Samer asbah",
+        "time": [
+            " 8:00-9:00",
+            " 9:00-10:00"
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Course3",
+        "description": "Course 3 description",
+        "professor": "Tawfiq asbah2",
+        "time": [
+            " 8:00-9:00",
+            " 9:00-10:00"
+        ]
+    }
+]
+
+# filter by professor name example 
+
+
+GET /api/courses/?search=Tawfiq%20asbah2
+HTTP 200 OK
+Allow: GET, HEAD, OPTIONS
+Content-Type: application/json
+Vary: Accept
+
+[
+    {
+        "id": 3,
+        "title": "Course3",
+        "description": "Course 3 description",
+        "professor": "Tawfiq asbah2",
+        "time": [
+            " 8:00-9:00",
+            " 9:00-10:00"
+        ]
+    }
+]
+
+ 
